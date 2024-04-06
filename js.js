@@ -1212,3 +1212,39 @@ vkBridge.send('VKWebAppShowBannerAd', {
       console.log(error);
     });
 
+
+
+
+    function share() {
+      vkBridge.send('VKWebAppShare', {
+  link: 'https://vk.com/app51895658'
+  })
+  .then((data) => { 
+    if (data.result) {
+      // Запись размещена, история опубликована, сообщение отправлено
+    }
+  })
+  .catch((error) => {
+    // Ошибка
+    console.log(error);
+  });
+    }
+
+    function inviteFriend() {
+      vkBridge.send('VKWebAppShowInviteBox', {
+  requestKey: "key-12345" //  Ключ приглашения
+  })
+  .then( (data) => {
+    if (data.success) {
+      // Пользователь нажал «Пригласить» 
+      // ...
+  
+      // Этим выбранным пользователям 
+      // не удалось отправить приглашения 
+      console.log('Приглашения не отправлены', data.notSentIds);
+    }
+  })
+  .catch( (error) => {
+    console.log(error); // Ошибка 
+  });
+    }
