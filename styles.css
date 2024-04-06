@@ -797,3 +797,23 @@ h2 {
     width: 220px;
     height: 100px;
 }
+
+    #lower {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #low {
+      font-size: 1em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ddd;
+      color: #444;
+      cursor: pointer;
+    }
+
+    #low:hover {
+      background-color: #bbb;
+    }
