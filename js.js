@@ -1175,11 +1175,6 @@
     })()
 })();
 
-document.getElementById('winButton').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'block';
-    document.getElementById('winMessage').style.display = 'block';
-});
-
 document.getElementById('sgame1').addEventListener('click', function() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('winMessage').style.display = 'none';
