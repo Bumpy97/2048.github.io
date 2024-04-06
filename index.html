@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A re-creation of the popular 2048 game.">
+    <title>2048-ish</title>
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,700">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+        vkBridge.send('VKWebAppInit');
+      </script>
+</head>
+
+<body>
+    <script>
+        vkBridge.send('VKWebAppInit');
+      </script>
+      
+    <div class="wrapper">
+        <main class="main">
+            <div class="intro">
+                <h1 class="intro_title">2048 </h1>
+            </div>
+            <div class="controls">
+                <div class="controls_game">
+                    <button id="sgame" data-js="newGame" class="controls_game-btn">Новая Игра</button>
+
+
+
+                </div>
+                <div class="controls_score">
+                    <span class="controls_score-label">Счет </span>
+                    <br>
+                    <span class="controls_score-text" data-js="score">0</span>
+                </div>
+            </div>
+            <div id="touchGameboard" class="gameboard" style="touch-action: none; user-select: none;">
+                <div class="grid">
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                    <div class="grid_cell"></div>
+                </div>
+                <div class="tile-container">
+                    <div class="tile" data-x="50" data-y="0"> <span class="tile_number" data-value="2">2</span> </div>
+                </div>
+            </div>
+
+            <button id="winButton">Победить</button>
+
+            <div class="overlay" id="overlay"></div>
+            <div class="win-message" id="winMessage">
+                <h1>Игра закончена!</h1>
+                <button id="sgame1" data-js="newGame" class="controls_game-btn_s">Новая Игра</button>
+            </div>
+
+
+        </main>
+    </div>
+
+    <script src="js.js" defer=""></script>
+
+
+</body>
+
+</html>
