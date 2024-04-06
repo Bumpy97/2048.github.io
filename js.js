@@ -728,9 +728,9 @@
                 }), E(Ft, Ot, {
                     defaults: {
                         event: "swipe",
-                        threshold: 10,
-                        velocity: .6,
-                        direction: 300,
+                        threshold: 3,
+                        velocity: .3,
+                        direction: 30,
                         pointers: 1
                     },
                     getTouchAction: function () {
@@ -787,7 +787,7 @@
                 }), Xt.VERSION = "2.0.7", Xt.defaults = {
                     domEvents: !1,
                     touchAction: Et,
-                    enable: !1,
+                    enable: !0,
                     inputTarget: null,
                     inputClass: null,
                     preset: [
@@ -810,7 +810,7 @@
                         [Ht],
                         [Ht, {
                             event: "doubletap",
-                            taps: 1
+                            taps: 2
                         },
                             ["tap"]
                         ],
