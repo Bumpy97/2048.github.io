@@ -1212,7 +1212,7 @@ vkBridge.send('VKWebAppShowBannerAd', {
 
     function share() {
       vkBridge.send('VKWebAppShare', {
-  link: 'https://vk.com/app51895658'
+  link: 'https://vk.com/app51896562'
   })
   .then((data) => { 
     if (data.result) {
